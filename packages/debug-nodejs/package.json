@@ -1,0 +1,55 @@
+{
+  "name": "@theia/debug-nodejs",
+  "version": "0.3.15",
+  "description": "Theia - NodeJS Debug Extension",
+  "dependencies": {
+    "@theia/debug": "^0.3.15",
+    "vscode-debugprotocol": "^1.26.0",
+    "unzip-stream": "^0.3.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "theiaExtensions": [
+    {
+      "backend": "lib/node/debug-nodejs-backend-module"
+    }
+  ],
+  "keywords": [
+    "theia-extension, debug, nodejs"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theia-ide/theia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theia-ide/theia/issues"
+  },
+  "homepage": "https://github.com/theia-ide/theia",
+  "files": [
+    "lib/node",
+    "src",
+    "scripts"
+  ],
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "theiaext clean",
+    "download": "node ./scripts/download-vscode-node-debug.js",
+    "build": "yarn postinstall && theiaext build",
+    "watch": "theiaext watch",
+    "test": "theiaext test",
+    "docs": "theiaext docs",
+    "postinstall": "node ./scripts/download-vscode-node-debug.js"
+  },
+  "devDependencies": {
+    "@theia/ext-scripts": "^0.3.15"
+  },
+  "nyc": {
+    "extends": "../../configs/nyc.json"
+  },
+  "debugAdapter": {
+    "downloadUrl": "https://ms-vscode.gallery.vsassets.io/_apis/public/gallery/publisher/ms-vscode/extension/node-debug2/1.28.3/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage",
+    "dir": "lib/adapter"
+  }
+}

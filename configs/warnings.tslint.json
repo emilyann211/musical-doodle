@@ -1,0 +1,19 @@
+{
+  "rules": {
+    "await-promise": {
+      "severity": "warning",
+      "options": [
+        true,
+        "Thenable"
+      ]
+    },
+    "no-any": {
+      "severity": "warning",
+      "options": true
+    },
+    "no-return-await": {
+      "severity": "warning",
+      "options": true
+    }
+  }
+}
