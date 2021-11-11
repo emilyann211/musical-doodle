@@ -1,0 +1,69 @@
+{
+  "name": "@theia/cpp",
+  "version": "0.9.0",
+  "description": "Theia - Cpp Extension",
+  "peerDependencies": {
+    "@theia/core": "^0.9.0",
+    "@theia/editor": "^0.9.0",
+    "@theia/filesystem": "^0.9.0",
+    "@theia/languages": "^0.9.0",
+    "@theia/monaco": "^0.9.0",
+    "@theia/preferences": "^0.9.0",
+    "@theia/process": "^0.9.0",
+    "@theia/task": "^0.9.0",
+    "@theia/workspace": "^0.9.0",
+    "@theia/variable-resolver": "0.9.0"
+  },
+  "dependencies": {
+    "string-argv": "^0.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/cpp-frontend-module",
+      "backend": "lib/node/cpp-backend-module"
+    }
+  ],
+  "keywords": [
+    "theia-extension"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theia-ide/theia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theia-ide/theia/issues"
+  },
+  "homepage": "https://github.com/theia-ide/theia",
+  "files": [
+    "data",
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "theiaext clean",
+    "build": "theiaext build",
+    "watch": "theiaext watch",
+    "test": "theiaext test"
+  },
+  "devDependencies": {
+    "@theia/core": "*",
+    "@theia/editor": "*",
+    "@theia/ext-scripts": "*",
+    "@theia/filesystem": "*",
+    "@theia/languages": "*",
+    "@theia/monaco": "*",
+    "@theia/preferences": "*",
+    "@theia/process": "*",
+    "@theia/task": "*",
+    "@theia/workspace": "*",
+    "@theia/variable-resolver": "*"
+  },
+  "nyc": {
+    "extends": "../../configs/nyc.json"
+  }
+}

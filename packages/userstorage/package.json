@@ -1,0 +1,50 @@
+{
+  "name": "@theia/userstorage",
+  "version": "0.9.0",
+  "description": "Theia - User Storage Extension",
+  "peerDependencies": {
+    "@theia/core": "^0.9.0",
+    "@theia/filesystem": "^0.9.0"
+  },
+  "dependencies": {
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/user-storage-frontend-module"
+    }
+  ],
+  "keywords": [
+    "theia-extension"
+  ],
+  "license": "EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theia-ide/theia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theia-ide/theia/issues"
+  },
+  "homepage": "https://github.com/theia-ide/theia",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "theiaext clean",
+    "build": "theiaext build",
+    "watch": "theiaext watch",
+    "test": "theiaext test"
+  },
+  "devDependencies": {
+    "@theia/core": "*",
+    "@theia/ext-scripts": "*",
+    "@theia/filesystem": "*"
+  },
+  "nyc": {
+    "extends": "../../configs/nyc.json"
+  }
+}
