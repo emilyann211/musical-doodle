@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "@theia/eslint-plugin",
+  "version": "1.19.0",
+  "description": "Custom ESLint rules for developing Theia extensions and applications",
+  "dependencies": {
+    "@theia/core": "1.19.0",
+    "js-levenshtein": "^1.1.6"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1"
+  },
+  "scripts": {
+    "prepare": "copyfiles ../../packages/core/src/common/i18n/nls.metadata.json ./data -f"
+  }
+}
