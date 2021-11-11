@@ -1,0 +1,50 @@
+{
+  "private": true,
+  "name": "@theia/example-browser",
+  "version": "0.3.2",
+  "dependencies": {
+    "@theia/core": "^0.3.2",
+    "@theia/cpp": "^0.3.2",
+    "@theia/editor": "^0.3.2",
+    "@theia/extension-manager": "^0.3.2",
+    "@theia/file-search": "^0.3.2",
+    "@theia/filesystem": "^0.3.2",
+    "@theia/git": "^0.3.2",
+    "@theia/java": "^0.3.2",
+    "@theia/keymaps": "^0.3.2",
+    "@theia/languages": "^0.3.2",
+    "@theia/markers": "^0.3.2",
+    "@theia/messages": "^0.3.2",
+    "@theia/metrics": "^0.3.2",
+    "@theia/monaco": "^0.3.2",
+    "@theia/navigator": "^0.3.2",
+    "@theia/outline-view": "^0.3.2",
+    "@theia/preferences": "^0.3.2",
+    "@theia/process": "^0.3.2",
+    "@theia/python": "^0.3.2",
+    "@theia/search-in-workspace": "^0.3.2",
+    "@theia/task": "^0.3.2",
+    "@theia/terminal": "^0.3.2",
+    "@theia/typescript": "^0.3.2",
+    "@theia/userstorage": "^0.3.2",
+    "@theia/workspace": "^0.3.2",
+    "@theia/output": "^0.3.2"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn build",
+    "clean": "theia clean && rimraf errorShots",
+    "build": "theia build",
+    "watch": "yarn build --watch",
+    "start": "theia start",
+    "start:debug": "yarn start --logLevel=debug",
+    "test": "wdio",
+    "coverage:compile": "yarn build --config coverage-webpack.config.js",
+    "coverage:remap": "remap-istanbul -i coverage/coverage.json -o coverage/coverage-final.json --exclude 'frontend/index.js' && rimraf coverage/coverage.json",
+    "coverage:report:html": "istanbul report --root coverage --format html",
+    "coverage:report:lcov": "istanbul report --root coverage --format lcov",
+    "coverage": "yarn coverage:compile && yarn test && yarn coverage:remap && yarn coverage:report:lcov && yarn coverage:report:html"
+  },
+  "devDependencies": {
+    "@theia/cli": "^0.3.2"
+  }
+}

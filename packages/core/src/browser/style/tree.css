@@ -1,0 +1,50 @@
+.theia-Tree {
+    overflow-y: auto;
+    overflow-x: hidden;
+    color: var(--theia-ui-font-color1);
+    background:var(--theia-layout-color3);
+    font-size: var(--theia-ui-font-size1);
+    transform: translateY(var(--theia-border-width));
+    max-height: calc(100% - var(--theia-border-width));
+}
+
+.theia-Tree:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.theia-TreeNode {
+    width: 500px;
+    height: var(--theia-private-horizontal-tab-height);
+}
+
+.theia-TreeNode:hover {
+    background: var(--theia-accent-color4);
+    cursor: pointer;
+}
+
+.theia-TreeNodeCaption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    height: var(--theia-private-horizontal-tab-height);
+    white-space: nowrap;
+}
+
+.theia-ExpansionToggle.theia-mod-collapsed {
+    background: url('../icons/collapse.svg') center center no-repeat;
+}
+
+.theia-ExpansionToggle:not(.theia-mod-collapsed) {
+    background: url('../icons/expand.svg') center center no-repeat;
+}
+
+.theia-Tree:focus .theia-TreeNode.theia-mod-selected {
+    background:var(--theia-accent-color3);
+}
+
+.theia-Tree:not(:focus) .theia-TreeNode.theia-mod-selected {
+    background:var(--theia-accent-color5);
+}
+
