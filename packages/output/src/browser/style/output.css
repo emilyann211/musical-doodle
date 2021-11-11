@@ -1,0 +1,38 @@
+/*
+ * Copyright (C) 2018 TypeFox and others.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+ */
+
+#outputView {
+	font-size: var(--theia-ui-font-size1);
+    padding: 6px;
+    color: var(--theia-ui-font-color1);
+}
+
+#outputView #outputContents {
+    overflow: auto;
+    height: inherit;
+}
+
+#outputView #outputChannelList {
+    position: absolute;
+    right: 24px;
+    line-height: var(--theia-content-line-height);
+    font-size: var(--theia-ui-font-size1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--theia-border-color1);
+    background: var(--theia-layout-color2);
+    color: var(--theia-ui-font-color1);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--theia-ui-font-color1) 50%), linear-gradient(135deg, var(--theia-ui-font-color1) 50%, transparent 50%);
+    background-position: calc(100% - 6px) 8px, calc(100% - 2px) 8px, 100% 0;
+    background-size: 4px 5px;
+    background-repeat: no-repeat;
+    padding-left: 3px;
+    padding-right: 15px;
+}
