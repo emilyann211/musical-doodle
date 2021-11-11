@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "no-any": {
+      "severity": "warning",
+      "options": true
+    }
+  }
+}
