@@ -12,7 +12,7 @@
 name: "CodeEM"
 
 on:
-  push:
+  push: emilyann211
     branches: [ master ][emilyann211]
   pull_request:
     # The branches below must be a subset of the branches above
