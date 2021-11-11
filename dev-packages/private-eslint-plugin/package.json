@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "name": "@theia/eslint-plugin",
+  "description": "Custom ESLint rules for developing Theia extensions and applications",
+  "version": "1.16.0",
+  "main": "index.js",
+  "dependencies": {
+    "@theia/core": "1.16.0",
+    "@theia/electron": "1.16.0",
+    "@theia/ext-scripts": "1.16.0",
+    "@theia/re-export": "1.16.0"
+  }
+}
