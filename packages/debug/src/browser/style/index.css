@@ -1,0 +1,212 @@
+/********************************************************************************
+ * Copyright (C) 2018 Red Hat, Inc. and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+.theia-debug-container {
+    display: inline-table;
+    color: var(--theia-ui-font-color1);
+    background: var(--theia-layout-color0);
+    font-size: var(--theia-ui-font-size1);
+}
+
+/* Common layout styles */
+
+.theia-debug-entry:focus .theia-mod-selected {
+    background: var(--theia-accent-color3);
+}
+
+.theia-debug-entry:not(:focus) .theia-mod-selected {
+    background: var(--theia-accent-color4);
+}
+
+.theia-debug-item {
+    line-height: var(--theia-private-horizontal-tab-height);
+    align-items: baseline;
+    padding-left: 5px;
+}
+
+.theia-debug-item:hover {
+    background: var(--theia-accent-color4);
+    cursor: pointer;
+}
+
+/* Horizontal layout styles */
+
+div[orientation='horizontal'] > .theia-debug-entry {
+    width: 25%;
+    float: left;
+    border-left: 1px solid var(--theia-border-color1);      
+    height: inherit;
+}
+
+div[orientation='horizontal'] > .debug-toolbar {
+    width: 25%;
+    height: 30px;
+    float: left;
+}
+
+div[orientation='horizontal'] > .theia-debug-entry.theia-Tree {
+    position: absolute; 
+    top: 30px; 
+    height: calc(100% - 30px);
+} 
+
+div[orientation='horizontal'] > .theia-debug-entry > div {
+    height: inherit;
+}
+
+div[orientation='horizontal'] > .theia-debug-entry > .theia-TreeContainer {
+    height: 100%;
+}
+
+div[orientation='horizontal'] > .theia-debug-entry > .theia-TreeContainer > div {
+    height: inherit;
+}
+
+div[orientation='horizontal'] > .theia-debug-entry > div > .theia-debug-threads {
+    overflow: auto;
+    height: calc(100% - 20px);
+}
+
+div[orientation='horizontal'] > .theia-debug-entry > div > .theia-debug-frames {
+    overflow: auto;
+    height: calc(100% - 20px);
+}
+
+div[orientation='horizontal'] > .theia-debug-entry > div > .theia-debug-breakpoints {
+    overflow: auto;
+    height: calc(100% - 20px);
+}
+
+div[orientation='horizontal'] > .theia-debug-entry > .theia-TreeContainer > div > .theia-debug-variables {
+    overflow: auto;
+    white-space: nowrap;
+    height: calc(100% - 20px);
+}
+
+/** Vertical layout styles */
+
+div[orientation='vertical'] > .theia-debug-entry {
+    width: inherit;
+    float: left;
+    border-left: 1px solid var(--theia-border-color1);      
+    height: 25%;
+} 
+
+div[orientation='vertical'] > .debug-toolbar {
+    width: inherit;
+    height: 30px;
+    float: left;
+}
+
+div[orientation='vertical'] > .theia-debug-entry.theia-Tree {
+    height: calc(25% - 30px);
+} 
+
+div[orientation='vertical'] > .theia-debug-entry > div {
+    height: 100%;
+}
+
+div[orientation='vertical'] > .theia-debug-entry > .theia-TreeContainer {
+    height: 100%;
+}
+
+div[orientation='vertical'] > .theia-debug-entry > .theia-TreeContainer > div {
+    height: 100%;
+}
+
+div[orientation='vertical'] > .theia-debug-entry > div > .theia-debug-threads {
+    overflow: auto;
+    height: calc(100% - 20px);
+}
+
+div[orientation='vertical'] > .theia-debug-entry > div > .theia-debug-frames {
+    overflow: auto;
+    height: calc(100% - 20px);
+}
+
+div[orientation='vertical'] > .theia-debug-entry > div > .theia-debug-breakpoints {
+    overflow: auto;
+    height: calc(100% - 40px);
+}
+
+div[orientation='vertical'] > .theia-debug-entry > .theia-TreeContainer > div > .theia-debug-variables {
+    overflow: auto;
+    white-space: nowrap;
+    height: calc(100% - 20px);
+}
+
+/** Icons */
+
+.theia-debug-active-line {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.active-breakpoint,
+.inactive-breakpoint {
+    display: inline-flex;
+    justify-content: flex-end;
+    position:  relative !important;
+    text-align: right;
+}
+
+.active-breakpoint {
+    color: rgb(255, 0, 0);
+}
+
+.inactive-breakpoint {
+    color: var(--theia-ui-font-color2);
+}
+
+/** Miscellaneous */
+
+.debug-toolbar .button-container .btn {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    align-items: center;
+    user-select: none;
+    border: var(--theia-border-width) solid transparent;
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.debug-toolbar .button-container .btn.enabled {
+    opacity: 0.7;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.debug-toolbar .button-container .btn.enabled:hover {
+    opacity: 1;
+}
+
+.theia-debug-header {
+    background: var(--theia-layout-color3);
+    text-transform: uppercase;
+    font-size: var(--theia-ui-font-size0);
+    font-weight: 800;
+    border: 4px solid;
+    border-color: var(--theia-layout-color3);
+}
+
+.theia-debug-breakpoint-dialog .theia-debug-breakpoints {
+    background: var(--theia-layout-color0);
+    height: 380px
+}
+
+.debug-tab-icon::before {
+    content: "\f188"
+}
