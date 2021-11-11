@@ -1,0 +1,52 @@
+/********************************************************************************
+ * Copyright (C) 2017 TypeFox and others.
+ *
+ * This program and the accompanying materials are made available under the
+ * terms of the Eclipse Public License v. 2.0 which is available at
+ * http://www.eclipse.org/legal/epl-2.0.
+ *
+ * This Source Code may also be made available under the following Secondary
+ * Licenses when the conditions for such availability set forth in the Eclipse
+ * Public License v. 2.0 are satisfied: GNU General Public License, version 2
+ * with the GNU Classpath Exception which is available at
+ * https://www.gnu.org/software/classpath/license.html.
+ *
+ * SPDX-License-Identifier: EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0
+ ********************************************************************************/
+
+ .dialogContent .theia-FileDialog {
+     height: 500px;
+     width: 500px;
+     border: var(--theia-border-width) solid var(--theia-border-color1);
+ }
+
+ .dialogContent .theia-NavigationPanel {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     margin-top: 0px;
+ }
+
+ .dialogContent .theia-LocationList {
+     width: 250px;
+ }
+
+ .dialogContent .theia-NavigationPanel > * {
+     margin-right: 4px;
+}
+
+.dialogContent .theia-NavigationPanel select {
+    background-color: var(--theia-ui-dialog-color);
+}
+
+.dialogContent .theia-ControlPanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+}
+
+.dialogContent .theia-ControlPanel > * {
+    margin-left: 4px;
+}
